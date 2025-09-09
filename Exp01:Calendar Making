@@ -1,0 +1,35 @@
+import java.util.Scanner;
+import java.util.Calendar;
+
+public class Calender {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Take input from user
+        System.out.print("Enter day: ");
+        int day = sc.nextInt();
+
+        System.out.print("Enter month: ");
+        int month = sc.nextInt() - 1; // Calendar month is 0-based
+
+        System.out.print("Enter year: ");
+        int year = sc.nextInt();
+
+        // Set date in calendar
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month, day);
+
+        // Get day of week
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+
+        String[] dayNames = {
+            "Sunday", "Monday", "Tuesday", "Wednesday",
+            "Thursday", "Friday", "Saturday"
+
+        };
+
+        System.out.println("The Day for given date is " + dayNames[dayOfWeek - 1]);
+
+        sc.close();
+    }
+}

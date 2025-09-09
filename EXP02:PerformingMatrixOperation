@@ -1,5 +1,4 @@
 public class MatrixOperation {
-
     public static void main(String[] args) {
         // Declare and create two 2D arrays
         int[][] A = {
